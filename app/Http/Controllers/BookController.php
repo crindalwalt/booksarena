@@ -16,14 +16,17 @@ class BookController extends Controller
 
     public function allBooks()
     {
-        return view("books");
+       $books = Book::all();
+        return view("books",[
+            "books" => $books,
+        ]);
     }
 
     public function singleBook (){
         return view("book-detail");
     }
 
-   
+
 
     public function checkout(){
         return view("checkout");
