@@ -223,7 +223,7 @@
                     <!-- Sort and View Options -->
                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
                         <p class="text-brown-600">Showing <span class="font-semibold">1-24</span> of <span
-                                class="font-semibold">1,247</span> books</p>
+                                class="font-semibold">{{ count($books) }}</span> books</p>
 
                         <div class="flex items-center space-x-4">
                             <label class="text-brown-600">Sort by:</label>
@@ -254,7 +254,7 @@
                                     <h3
                                         class="font-semibold text-brown-800 mb-1 group-hover:text-brown-600 transition line-clamp-2">
                                         {{ $book->title }}</h3>
-                                    <p class="text-sm text-brown-500 mb-3"> {{ $book->author_id }}</p>
+                                    <p class="text-sm text-brown-500 mb-3"> {{ $book->author->name }}</p>
                                     <div class="flex items-center justify-between">
                                         <span class="text-lg font-bold text-brown-700">${{ $book->price }}</span>
                                         <div class="flex items-center space-x-1">

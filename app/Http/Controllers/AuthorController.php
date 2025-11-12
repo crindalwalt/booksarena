@@ -11,7 +11,10 @@ class AuthorController extends Controller
 
     public function allAuthors()
     {
-        return view("authors");
+        $authors = Author::all();
+        return view("authors",[
+            'authors' => $authors,
+        ]);
     }
 
     public function singleAuthor()

@@ -9,4 +9,8 @@ class Book extends Model
 {
     /** @use HasFactory<\Database\Factories\BookFactory> */
     use HasFactory;
+
+    public function author(){
+        return $this->belongsTo(Author::class, "author_id");
+    }
 }
